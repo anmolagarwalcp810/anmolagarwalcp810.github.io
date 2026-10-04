@@ -1,0 +1,189 @@
+:root {
+  --bg: #f3f3f3;
+  --panel: #f7f7f7;
+  --text: #1f2328;
+  --muted: #2f3337;
+  --border: #d9d9d9;
+  --link: #0a66c2;
+  --shadow: rgba(15, 23, 42, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.page-shell {
+  width: min(1100px, calc(100vw - 64px));
+  margin: 32px auto 48px;
+  padding: 0 0 18px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.site-header {
+  padding: 18px 0 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header h1 {
+  margin: 0;
+  padding-left: 32px;
+  font-size: clamp(2.2rem, 2vw + 1.3rem, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.profile-card {
+  display: flex;
+  justify-content: center;
+  padding: 26px 0 0;
+}
+
+.profile-photo {
+  width: min(760px, 72vw);
+  max-width: 740px;
+  aspect-ratio: 1.15;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px var(--shadow);
+}
+
+.content-block,
+.social-block {
+  padding: 24px 0 0;
+}
+
+.content-block h2,
+.social-block h2 {
+  margin: 0;
+  padding: 0 32px;
+  font-size: clamp(1.7rem, 1vw + 1.2rem, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.divider {
+  margin: 14px 32px 0;
+  border-top: 1px solid var(--border);
+}
+
+.content-block p {
+  margin: 0;
+  padding: 22px 32px 0;
+  font-size: clamp(1rem, 0.8vw + 0.88rem, 1.2rem);
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.social-block {
+  padding-bottom: 12px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 32px 0;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--link);
+  font-weight: 600;
+  font-size: 1.02rem;
+  transition: opacity 0.2s ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  opacity: 0.8;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #dfeaf8;
+  color: var(--link);
+  flex-shrink: 0;
+}
+
+.social-icon svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+  fill: currentColor;
+}
+
+.linkedin-icon {
+  background: rgba(10, 102, 194, 0.1);
+}
+
+.github-icon {
+  background: rgba(36, 41, 47, 0.1);
+  color: #24292f;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100vw - 24px, 1100px);
+    margin: 18px auto 28px;
+  }
+
+  .site-header h1 {
+    padding-left: 20px;
+  }
+
+  .content-block h2,
+  .social-block h2,
+  .divider,
+  .content-block p,
+  .social-links {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .divider {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .profile-card {
+    padding-top: 20px;
+  }
+
+  .profile-photo {
+    width: min(90vw, 760px);
+  }
+
+  .social-links {
+    gap: 12px;
+  }
+}
