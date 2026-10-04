@@ -21,8 +21,11 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", "Segoe UI", sans-serif;
+  font-family: "Manrope", "Segoe UI", sans-serif;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 img {
@@ -47,9 +50,9 @@ img {
 .site-header h1 {
   margin: 0;
   padding-left: 32px;
-  font-size: clamp(2.2rem, 2vw + 1.3rem, 3.2rem);
+  font-size: clamp(2.3rem, 2vw + 1.4rem, 3.4rem);
   font-weight: 800;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.075em;
 }
 
 .profile-card {
@@ -89,10 +92,10 @@ img {
 .content-block p {
   margin: 0;
   padding: 22px 32px 0;
-  font-size: clamp(1rem, 0.8vw + 0.88rem, 1.2rem);
+  font-size: clamp(1.02rem, 0.8vw + 0.9rem, 1.24rem);
   color: var(--muted);
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 .social-block {
@@ -113,8 +116,8 @@ img {
   gap: 10px;
   text-decoration: none;
   color: var(--link);
-  font-weight: 600;
-  font-size: 1.02rem;
+  font-weight: 700;
+  font-size: 1.04rem;
   transition: opacity 0.2s ease;
 }
 
